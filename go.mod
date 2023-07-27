@@ -1,4 +1,4 @@
-module github.com/RaymondCode/simple-demo
+module github.com/jacobtime/Los-Santos-TikTok
 
 go 1.17
 

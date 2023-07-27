@@ -3,8 +3,9 @@ package service
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/RaymondCode/simple-demo/controller"
+	"github.com/jacobtime/Los-Santos-TikTok/controller"
 	"io"
+	"log"
 	"net"
 	"sync"
 )
@@ -30,7 +31,12 @@ func RunMessageServer() {
 }
 
 func process(conn net.Conn) {
-	defer conn.Close()
+	defer func(conn net.Conn) {
+		err := conn.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}(conn)
 
 	var buf [256]byte
 	for {

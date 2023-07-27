@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/RaymondCode/simple-demo/controller"
 	"github.com/gin-gonic/gin"
+	"github.com/jacobtime/Los-Santos-TikTok/controller"
 )
 
 func initRouter(r *gin.Engine) {
